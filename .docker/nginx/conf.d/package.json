@@ -13,9 +13,9 @@
     "author": "Anita Peyer",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/opportunity-zh/php-pdo-opp/issues"
+      "url": "https://https://github.com/atournikate/php-pdo-opp/issues"
     },
-    "homepage": "https://github.com/opportunity-zh/php-pdo-opp#readme",
+    "homepage": "https://https://github.com/atournikate/php-pdo-opp#readme",
     "devDependencies": {
       "sass": "^1.34.1"
     }
