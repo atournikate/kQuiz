@@ -33,10 +33,7 @@
     </div>
     <div class="background">
         <div class="main">
-            <h1><?php 
-                echo '<a href="/quiz-kate/introduction.php">INTRODUCTION</a>'; 
-            ?>
-            </h1>
+            <?php intro();?>
         </div>
     </div>
 
