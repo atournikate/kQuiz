@@ -1,13 +1,14 @@
 <?php
+    // start session and initialize achieved number of points
+    session_start();
+
+    
     // Preset path to include folder
-    set_include_path($_SERVER['DOCUMENT_ROOT'] . '/quiz-kate/php');
+    set_include_path($_SERVER['DOCUMENT_ROOT'] . '/include');
 
     // Page includes
     include 'auth.php';
     include 'quiz-kate-data.php';
-
-    // Start the session
-    session_start();
 
     // Get quiz data
     $quizData = q_data();

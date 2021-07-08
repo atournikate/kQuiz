@@ -1,13 +1,14 @@
 <?php
+    // start session and initialize achieved number of points
+    session_start();
+
     // Preset path to include folder
-    set_include_path($_SERVER['DOCUMENT_ROOT'] . '/quiz-kate/php');
+    set_include_path($_SERVER['DOCUMENT_ROOT'] . '/include');
 
     // Page includes
     include 'auth.php';
     include 'quiz-kate-data.php';
-
-    // Start the session and initialize the result array
-    session_start();
+    
     $_SESSION["quiz-kate-results"] = array();
 
     // Get quiz data
@@ -16,27 +17,17 @@
 
 
     // Session object: Update number of achieved points
-
-    // echo '<br><br>';
-    // var_dump($_POST);
-    // echo '<br><br>';
-    // var_dump($_SESSION);
-
     $_SESSION['achievedPoints'] = $_SESSION['achievedPoints'] + $_POST['radio'];
 
     $percentage = ($_SESSION['achievedPoints'] / count($quizData['questions']) * 100);
 
+    // echo '<br><br>';
+    // echo 'this is the number of questions: ';
+    // echo count($quizData['questions']);
     
-    echo '<br><br>';
-    echo 'this is the number of questions: ';
-    echo count($quizData['questions']);
-    
-    echo '<br><br>';
-    echo 'this is the percentage: ';
-    echo $percentage;
-
-
-
+    // echo '<br><br>';
+    // echo 'this is the percentage: ';
+    // echo $percentage;
 ?>
 
 <!DOCTYPE html>

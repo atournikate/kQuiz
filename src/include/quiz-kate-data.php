@@ -12,7 +12,6 @@ function q_introductionData() {
     return array(
         'title' => "Random Animal Quiz",
         'description' => "Go for it ...",
-        // 'backgroundURL' => "/images/ghostShark.jpeg",
         'imageURL' => "/images/axle.jpg",
         'nextAction' => 'question.php',
         'questionID' => 'q0'
@@ -194,4 +193,3 @@ function q_reportData() {
     );
 }
 
-?>

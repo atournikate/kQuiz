@@ -18,7 +18,7 @@
         </style>
     </head>
     <body>
-        <img src="images/babyYoda.gif" alt="cute baby yoda animation" class="center">
+        <img src="images/axle.jpeg" alt="an axolotle" class="center">
 
         <?php
 
@@ -29,39 +29,32 @@
         define('DB_PASSWORD', getenv('DB_PASSWORD'));
         define('DB_HOST', getenv('DB_HOST'));
 
-        //PHP Data Objects Extension (PDO) - extends database, library of functions, data, formatting etc. This is a support object.
-        //open a new connection
         $connection = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASSWORD);
-            // echo "<br>";
-            // var_dump($connection);
-            // echo "<br>";
+            
+        $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
 
-            //trace names of all available DB tables
-            //select name from which portion of .location where this is that
-            //build the query object (support object, has NO data yet)
-        // $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
+        $tables     = $query->fetchAll(PDO::FETCH_COLUMN); //get indexed array of table names
+        echo "length of tables: " . count($tables);
 
 
-        // //here we go for the goods: fetch all the table names
-        // $tables     = $query->fetchAll(PDO::FETCH_COLUMN); //get indexed array of table names
-        // // var_dump($tables);
-        // // echo "length of tables: " . count($tables);
+        if (empty($tables)) {
+            //when $tables is empty, let me know
+            echo '<p class="center">There are no tables in database <code>demo</code>.</p>';
+        } else {
+            //otherwise if table is available: list the names of my DB tables
+            echo '<p class="center">Database <code>demo</code> contains the following tables:</p>';
+            echo '<ul class="center">';
+            foreach ($tables as $tableName) {
+                echo "<li>{$tableName}</li>"; //use '{tableName}' as a placeholder
+            }
+            echo '</ul>';
+        }
 
+        print "<h1>Introduction</h1>";
 
-        // if (empty($tables)) {
-        //     //when $tables is empty, let me know
-        //     echo '<p class="center">There are no tables in database <code>demo</code>.</p>';
-        // } else {
-        //     //otherwise if table is available: list the names of my DB tables
-        //     echo '<p class="center">Database <code>demo</code> contains the following tables:</p>';
-        //     echo '<ul class="center">';
-        //     foreach ($tables as $tableName) {
-        //         echo "<li>{$tableName}</li>"; //use '{tableName}' as a placeholder
-        //     }
-        //     echo '</ul>';
-        // }
-
-        print "<h1>Example with FETCH_ASSOC</h1>";
+        $query = $connection->query("SELECT * from Introduction");
+        $intoduction = $query->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($intoduction);
 
         //build the query object (support obect, has no data yet)
         //build query object: select all items from table 'Question' 
