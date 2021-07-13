@@ -1,0 +1,27 @@
+%btn {
+  display: flex;
+  border-radius: 5px 30px;
+  padding: 8px 20px;
+  margin: 3px;
+  font-family: $sec-font;
+  font-size: medium;
+  box-shadow: 3px 4px 6px $tert-dark;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $prim-color;
+  color: lighten($prim-light, 20%);
+  &:hover {
+    background-color: $prim-light;
+    color: darken($prim-color, 20%);
+  }
+  &:disabled {
+    background-color: #999999;
+    color: #555555;
+  }
+}

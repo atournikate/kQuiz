@@ -1,5 +1,9 @@
-// @import 'header';
-// @import 'footer';
+@import "variables";
+@import "buttons";
+@import "cards";
+@import "functions";
+@import "header";
+@import "footer";
 
 // base
 * {
@@ -9,7 +13,24 @@
 }
 
 html {
-  font: $font-style;
-  color: $grey-color;
+  font: $prim-font;
+  color: $prim-color;
   line-height: 1.6;
+}
+
+.banner {
+  background-color: $background;
+  color: $sec-color;
+  font-family: $sec-font;
+  height: 100px;
+  width: 100vw;
+
+  h1 {
+    font-family: $big-font;
+  }
+}
+
+.background {
+  background-image: url(./images/ghostShark.jpeg);
+  background-size: cover;
 }

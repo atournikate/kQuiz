@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Alef&family=Luckiest+Guy&family=Rock+Salt&family=RocknRoll+One&display=swap");
+.btn-primary {
+  display: flex;
+  border-radius: 5px 30px;
+  padding: 8px 20px;
+  margin: 3px;
+  font-family: "RocknRoll One", sans-serif;
+  font-size: medium;
+  box-shadow: 3px 4px 6px #313a46;
+}
+
+.btn-primary:hover {
+  transform: scale(0.9);
+}
+
+.btn-primary {
+  background-color: #40af8e;
+  color: #a8ffe5;
+}
+
+.btn-primary:hover {
+  background-color: #42ffc6;
+  color: #256451;
+}
+
+.btn-primary:disabled {
+  background-color: #999999;
+  color: #555555;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font: "Rock Salt", cursive;
+  color: #40af8e;
+  line-height: 1.6;
+}
+
+.banner {
+  background-color: #3a534c;
+  color: #fa8072;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+.background {
+  background-image: url(./images/ghostShark.jpeg);
+  image-size: cover;
+}
