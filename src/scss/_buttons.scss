@@ -1,0 +1,26 @@
+%btn {
+  display: flex;
+  border-radius: 5px 30px;
+  padding: 8px 20px;
+  margin: 3px;
+  font-family: $sec-font;
+  font-size: medium;
+  box-shadow: 3px 4px 6px $tert-dark;
+  background-color: $prim-color;
+  color: $tert-color;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $prim-color;
+  color: $tert-color;
+
+  &:hover {
+    background-color: $prim-light;
+    color: $background;
+  }
+}
