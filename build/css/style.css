@@ -48,9 +48,15 @@
   font-family: "Luckiest Guy", cursive;
   font-size: 5em;
   color: #fa8072;
+  text-shadow: 2px 5px 5px #3c506b;
 }
-.box .card form {
+.box .card h3 {
+  font-size: 4rem;
+  color: #40af8e;
+}
+.box .card .otions {
   justify-content: space-around;
+  color: #fa8072;
 }
 
 .header {

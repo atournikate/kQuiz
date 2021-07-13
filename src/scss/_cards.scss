@@ -24,10 +24,17 @@
       font-family: $big-font;
       font-size: 5em;
       color: $sec-color;
+      text-shadow: 2px 5px 5px $tert-color;
     }
 
-    form {
+    h3 {
+      font-size: 4rem;
+      color: $prim-color;
+    }
+
+    .otions {
       justify-content: space-around;
+      color: $sec-color;
     }
   }
 }

@@ -36,7 +36,7 @@
         echo '<h3>' . $pageData['text'] . '</h3>'; 
         ?>
 
-        
+        <div class="options">
 
             <form action="<?php echo $pageData['nextAction']; ?>" method="post">
 
@@ -61,6 +61,8 @@
             <input type="submit" value="NEXT">
 
             </form>
+
+        </div>
 
        
        
