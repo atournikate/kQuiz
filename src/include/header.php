@@ -11,5 +11,15 @@
 
 <body>
      
-     <div class="background">
+    <div class="header">
+        <h1>Quiz Wizards</h1>
+        <nav>
+            <ul>
+                <li><a href="localhost:8000">Home</a></li>
+                <li><a href="login.php">Log In</a></li>
+                <li><a href="register.php">Create an Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
         <div class="main">

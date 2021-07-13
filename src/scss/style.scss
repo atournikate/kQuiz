@@ -16,21 +16,47 @@ html {
   font: $prim-font;
   color: $prim-color;
   line-height: 1.6;
-}
 
-.banner {
-  background-color: $background;
-  color: $sec-color;
-  font-family: $sec-font;
-  height: 100px;
-  width: 100vw;
-
-  h1 {
-    font-family: $big-font;
+  @media (max-width: 1200px) {
+    font-size: calc(10px + 0.2vw);
   }
 }
 
-.background {
-  background-image: url(./images/ghostShark.jpeg);
+body {
+  background-image: url("/images/ghostShark.jpeg");
   background-size: cover;
+  background-repeat: no-repeat;
+
+  a {
+    text-decoration: none;
+    color: $sec-color;
+
+    &:hover {
+      color: $sec-light;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.container {
+  position: relative;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main {
+    min-width: 50vw;
+  }
+
+  h2 {
+    font-family: $big-font;
+    font-size: 5em;
+  }
+
+  h3 {
+    font-family: $sec-font;
+    font-size: 1.5em;
+    color: $sec-light;
+  }
 }

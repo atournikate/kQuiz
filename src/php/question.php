@@ -14,6 +14,7 @@
         $pageData = questionDataFromDB($_SESSION['quizID'], $questionID);
     }
 
+
     if (!isset($pageData)) {
         echo 'Question data for questionID="' . $questionID . '" not available.';
         exit;
@@ -27,16 +28,15 @@
         $_SESSION['achievedPoints'] = $_SESSION['achievedPoints'] + $_POST['radio'];
     }
 
-    require_once 'header.php';
+    require_once 'quiz_header.php'; 
     ?>
-
-
-       <?php
-        //Quiz question text
+       
+        <img src="../images/<?php echo $pageData['imgURL']?>"><br>
+        <?php
         echo '<h3>' . $pageData['text'] . '</h3>'; 
         ?>
 
-        <div class="card">
+        
 
             <form action="<?php echo $pageData['nextAction']; ?>" method="post">
 
@@ -62,6 +62,5 @@
 
             </form>
 
-        </div>
        
        

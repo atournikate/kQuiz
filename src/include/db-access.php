@@ -85,4 +85,42 @@
             return $answers;
     }
 
+    function reportDataFromDB($quizID) {
+        if (TRACE_DB_ACCESS) {
+            print "<h3>this is a report now. huray</h3>";
+        }
+
+        $query = DBConnection()->prepare("SELECT * from Report where quizID = ?");
+            $query->bindValue(1, $quizID);
+            $query->execute();
+
+            $report = $query->fetch(PDO::FETCH_ASSOC);
+
+            if (TRACE_DB_ACCESS) {
+                var_dump($report);
+                echo '<p>-----------------------------------------</p>';
+            }
+
+        return $report;    
+    
+    }
+
+    function totalQuestions($quizID) {
+        if (TRACE_DB_ACCESS) {
+            print "<h3>Total Number of Questions: </h3>";
+        }
+
+        $query = DBConnection()->prepare("SELECT id from Question where quizID = ?");
+        $query->bindValue(1, $quizID);
+        $query->execute();
+
+        $totalQuestions = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        if (TRACE_DB_ACCESS) {
+            var_dump($totalQuestions);echo '<p>-----------------------------------------</p>';
+        }
+
+    return $totalQuestions;    
+    }
+
 ?>

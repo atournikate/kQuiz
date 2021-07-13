@@ -6,6 +6,8 @@
   font-family: $sec-font;
   font-size: medium;
   box-shadow: 3px 4px 6px $tert-dark;
+  background-color: $prim-color;
+  color: $tert-color;
 
   &:hover {
     transform: scale(0.9);
@@ -15,13 +17,10 @@
 .btn-primary {
   @extend %btn;
   background-color: $prim-color;
-  color: lighten($prim-light, 20%);
+  color: $tert-color;
+
   &:hover {
     background-color: $prim-light;
-    color: darken($prim-color, 20%);
-  }
-  &:disabled {
-    background-color: #999999;
-    color: #555555;
+    color: $background;
   }
 }

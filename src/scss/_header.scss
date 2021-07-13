@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: $background;
+  color: $prim-color;
+  font-family: $sec-font;
+  height: 7.5rem;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    color: $sec-color;
+    font-family: $big-font;
+    font-size: 7.5rem;
+    text-shadow: 2px 5px 5px $tert-dark;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      margin: 10px;
+      padding: 12px;
+      background-color: lighten($background, 10%);
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 <?php
     // start session and initialize achieved number of points
     session_start();
+
+    //echo $_SERVER['DOCUMENT_ROOT'];
     // Preset path to include folder 
     set_include_path($_SERVER['DOCUMENT_ROOT'] . '/include');
 
@@ -11,29 +13,12 @@
     require_once 'header.php';
 ?>
 
-
-<body>
-
-    <div class="header">
-        <h1>Quiz Wizards</h1>
-        <nav>
-            <ul>
-                <li><a href="localhost:8000">Home</a></li>
-                <li><a href="login.php">Log In</a></li>
-                or <li><a href="register.php">Create</a></li> an account
-            </ul>
-        </nav>
-
-        
-    </div>
-    <div class="background">
-        <div class="main">
             <?php 
-                //write hyperlink with GET parameters.
-                echo '<a href="/php/introduction.php">The First and Only Quiz...</a>';
+                echo '<h3>Try out our first and only</h3><br><h2><a href="/php/introduction.php">Animal Quiz</a></h2>';
             ?>
-        </div>
-    </div>
-
+        
+    <?php
+    require_once 'footer.php';
+    ?>
 
 

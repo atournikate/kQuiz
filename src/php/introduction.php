@@ -9,8 +9,8 @@
     include 'db-access.php';
     //include 'db-functions.php';
 
-    if (isset($_GET['qid'])) {
-        $quizID = $_GET['qid'];
+    if (isset($_GET['quizID'])) {
+        $quizID = $_GET['quizID'];
     } else {
         $quizID = 1;
     }
@@ -22,13 +22,13 @@
     $pageData = introductionDataFromDB($quizID);
 
     $_SESSION['achievedPoints'] = 0;
-    require_once 'header.php'; 
+    require_once 'quiz_header.php'; 
 ?>
 
 
             <?php 
-                echo '<img src="/images/' . $pageData['imgURL'] . '" style="width:300px;"><br>';
-                echo '<h1>' . $pageData['title'] . '</h1>'; 
+                echo '<img src="/images/' . $pageData['imgURL'] . '"><br>';
+                echo '<h2>' . $pageData['title'] . '</h2>'; 
              ?>
 
             
@@ -38,10 +38,13 @@
              
              <input type="hidden" name="nextQuestionID" value="<?php if (isset($pageData['nextQuestionID'])) 
              echo $pageData['nextQuestionID']?>">
-             <input type="submit" value="START">
+             <input class="btn btn-primary" type="submit" value="START">
          </form>
-        </div>
-    </div>
+        
+              
+    <?php
+    require_once 'footer.php';
+    ?>
 
 
 
