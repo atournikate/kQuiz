@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: $background;
+  background-color: $bg-color;
   color: $prim-color;
   font-family: $sec-font;
   height: 7.5rem;
@@ -34,7 +34,7 @@
     li {
       margin: 10px;
       padding: 12px;
-      background-color: lighten($background, 10%);
+      background-color: lighten($bg-color, 10%);
       border-radius: 5px;
     }
   }

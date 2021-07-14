@@ -1,9 +1,7 @@
 @import "variables";
-@import "buttons";
-@import "cards";
-@import "functions";
 @import "header";
 @import "footer";
+@import "cards";
 
 // base
 * {
@@ -15,11 +13,10 @@
 html {
   font: $prim-font;
   color: $prim-color;
-  line-height: 1.6;
 
-  @media (max-width: 1200px) {
-    font-size: calc(10px + 0.2vw);
-  }
+  // @media (max-width: 1200px) {
+  //   font-size: calc(10px + 0.2vw);
+  // }
 }
 
 body {
