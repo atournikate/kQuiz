@@ -32,7 +32,7 @@
     require_once 'header.php'; 
     ?>
 
-    <img src="<?php echo $pageData['imageURL']?>"><br>
+    <img src="<?php echo $pageData['imgURL']?>"><br>
                 
                 <?php
                     echo '<a href="/index.php">' . $pageData['title'] . '</a><br>';

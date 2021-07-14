@@ -4,7 +4,7 @@
   "description": "This is a simple LEMP stack setup to use with docker-compose. This setup should help you imitate php pdo and quickly get access to more knowledge.",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "sass --watch $(pwd)/src/scss:$(pwd)/build/css"
+    "sass:watch": "sass --watch $(pwd)/src/scss:$(pwd)/src/build/css"
   },
   "repository": {
     "type": "git",

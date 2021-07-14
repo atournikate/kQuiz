@@ -8,8 +8,7 @@
 
   .card {
     max-width: 50vw;
-    background: rgba($background, 0.5);
-    color: $prim-color;
+    color: #aff;
     padding: 20px;
     border-radius: 10px;
     justify-content: center;
@@ -17,7 +16,7 @@
     img {
       max-width: 90%;
       margin: auto;
-      border-radius: 10px;
+      border-radius: 5px;
     }
 
     h2 {
@@ -28,13 +27,15 @@
     }
 
     h3 {
+      font-family: $prim-font !important;
       font-size: 4rem;
       color: $prim-color;
     }
-
-    .otions {
-      justify-content: space-around;
-      color: $sec-color;
+  }
+  .options {
+    label {
+      color: $sec-color !important;
+      font-family: $sec-font;
     }
   }
 }

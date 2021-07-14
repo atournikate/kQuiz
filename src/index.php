@@ -2,7 +2,7 @@
     // start session and initialize achieved number of points
     session_start();
 
-    //echo $_SERVER['DOCUMENT_ROOT'];
+    //print '<br><br><br>' . $_SERVER['DOCUMENT_ROOT'] . '<br>';
     // Preset path to include folder 
     set_include_path($_SERVER['DOCUMENT_ROOT'] . '/include');
 
@@ -20,5 +20,3 @@
     <?php
     require_once 'footer.php';
     ?>
-
-

@@ -1,30 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Alef&family=Luckiest+Guy&family=Rock+Salt&family=RocknRoll+One&display=swap");
-.btn-primary {
-  display: flex;
-  border-radius: 5px 30px;
-  padding: 8px 20px;
-  margin: 3px;
-  font-family: "RocknRoll One", sans-serif;
-  font-size: medium;
-  box-shadow: 3px 4px 6px #313a46;
-}
-.btn-primary:hover {
-  transform: scale(0.9);
-}
-
-.btn-primary {
-  background-color: #40af8e;
-  color: #a8ffe5;
-}
-.btn-primary:hover {
-  background-color: #42ffc6;
-  color: #256451;
-}
-.btn-primary:disabled {
-  background-color: #999999;
-  color: #555555;
-}
-
 .box {
   position: relative;
   top: 20px;
@@ -33,29 +7,46 @@
   align-items: center;
   justify-content: center;
 }
+
 .box .card {
   max-width: 50vw;
-  background-color: #3a534c;
-  color: #3a534c;
+  color: #aff;
   padding: 20px;
   border-radius: 10px;
+  justify-content: center;
 }
+
 .box .card img {
   max-width: 90%;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
+
 .box .card h2 {
   font-family: "Luckiest Guy", cursive;
   font-size: 5em;
   color: #fa8072;
+  text-shadow: 2px 5px 5px #3c506b;
+}
+
+.box .card h3 {
+  font-size: 4rem;
+  color: #40af8e;
+}
+
+.box .options input[type="radio"] {
+  display: none;
+}
+
+.box .options label {
+  color: #fa8072 !important;
+  font-family: "RocknRoll One", sans-serif;
 }
 
 .header {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #3a534c;
   color: #40af8e;
   font-family: "RocknRoll One", sans-serif;
   height: 7.5rem;
@@ -66,6 +57,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .header h1 {
   color: #fa8072;
   font-family: "Luckiest Guy", cursive;
@@ -73,19 +65,21 @@
   text-shadow: 2px 5px 5px #313a46;
   text-align: center;
 }
+
 .header nav {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
+
 .header nav ul {
   display: flex;
   list-style-type: none;
 }
+
 .header nav li {
   margin: 10px;
   padding: 12px;
-  background-color: #4f7167;
   border-radius: 5px;
 }
 
@@ -109,6 +103,7 @@ html {
   color: #40af8e;
   line-height: 1.6;
 }
+
 @media (max-width: 1200px) {
   html {
     font-size: calc(10px + 0.2vw);
@@ -120,22 +115,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 body a {
   text-decoration: none;
   color: #fa8072;
 }
+
 body a:hover {
   color: #ffba7a;
   transform: scale(1.1);
-}
-body::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  color: #ffffff;
-  opacity: 0.5;
 }
 
 .container {
@@ -145,17 +133,18 @@ body::after {
   align-items: center;
   justify-content: center;
 }
+
 .container .main {
   min-width: 50vw;
 }
+
 .container h2 {
   font-family: "Luckiest Guy", cursive;
   font-size: 5em;
 }
+
 .container h3 {
   font-family: "RocknRoll One", sans-serif;
   font-size: 1.5em;
   color: #ffba7a;
 }
-
-/*# sourceMappingURL=style.css.map */

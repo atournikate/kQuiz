@@ -52,7 +52,7 @@
                 value="<?php echo $pageData['answers'][2]['isCorrect']; ?>">
             <label for="answer2"><?php echo $pageData['answers'][2]['text']; ?></label><br>
 
-            <input type="radio" id="answer3" name="radio" 
+            <input type="radio"id="answer3" name="radio" 
                 value="<?php echo $pageData['answers'][3]['isCorrect']; ?>">
             <label for="answer3"><?php echo $pageData['answers'][3]['text']; ?></label><br><br>
 
